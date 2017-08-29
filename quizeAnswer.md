@@ -2,7 +2,7 @@
 ###### （1）
 > var x = 1;</br>{</br>&nbsp; &nbsp;var x = 2;</br>}</br>x;
 
-###### 首先javascript没有块作用域，所以上面代码可以视为全部在window下运行 所以以上代码如下运行顺序如下:</br>var x = undefined;</br>x = 1; </br> x = 2; // 这里直接覆盖之前的值 防止变为undefined</br>// 最后本题结果就是2.
+###### 首先javascript没有块作用域，所以上面代码可以视为全部在全局环境下运行 所以以上代码如下运行顺序如下:</br>var x = undefined;</br>x = 1; </br> x = 2; // 这里直接覆盖之前的值 防止变为undefined</br>// 最后本题结果就是2.
 
 ###### （2）
 > if (!('y' in window))</br>{</br>&nbsp; var y = 1;</br>}
