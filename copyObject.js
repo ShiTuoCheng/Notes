@@ -54,7 +54,7 @@ const deepCopy = (obj) => {
 		if(obj.hasOwnProperty(key)){
 
 			//递归实现深复制（判断是否为对象若为对象则递归实现深复制，若为基础类型则直接浅复制）
-			if(typeof obj[key] === object){
+			if(typeof obj[key] === “object”){
 
 				newObj[key] = deepCopy(obj[key]);
 			}else{
