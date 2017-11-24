@@ -38,6 +38,18 @@ class list {
         }
     }
 
+    // 在特定目标后插入一个元素
+    insert(element, after){
+        let insertPosition = this.dataSource.find(after);
+        if(insertPosition !== -1){
+            this.dataSource.splice(insertPosition, 0, element);
+            this.listSize++;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     // 获取队列的长度
     getLength(){
         return this.listSize;
@@ -50,7 +62,7 @@ class list {
 }
 
 // 二叉树节点
-class Node{
+class TreeNode{
     constructor(data, left, right){
 
         this.data = data;
@@ -72,7 +84,7 @@ class BTreeFactory{
 
     // 插入一个节点
     insert(data) {
-        let node = new Node(data, null, null);
+        let node = new TreeNode(data, null, null);
 
         if(this.root === null){
             this.root = node;
@@ -129,5 +141,82 @@ class BTreeFactory{
             console.log(node.root);
         }
     }
+}
 
+// 栈数据结构
+class stack{
+    constructor(dataSource = [], top = 0){
+        this.dataSource = dataSource; 
+        this.top = top;
+    }
+
+    //向栈中压入一个元素
+    push(element){
+        this.dataSource[this.top++].push(element);
+    }
+
+    // 弹出栈中第一个元素
+    pop(){
+        return this.dataSource[this.top--];
+    }
+
+    //弹出栈中最后一个元素
+    peek(){
+        return this.dataSource[this.top-1];
+    }
+
+    getLength(){
+        return this.top;
+    }
+
+    clear(){
+        this.top = 0;
+    }
+}
+
+//链表
+class Node{
+    constructor(element){
+        this.next = null;
+        this.element = element;
+    }
+}
+
+class LinkedNode{
+    constructor(head, length = 0){
+        this.head = new Node(head);
+        this.length = length;
+    }
+
+    // 插入一个节点
+    insert(element){
+        let node = new Node(element),
+            current;
+        
+        if(this.head === null){
+            this.head = node;
+        }else{
+            current = this.head;
+            while(current.next){
+                current = current.next;
+            }
+            current.next = node;
+        }
+        this.length++;
+    }
+
+    // 删除一个节点
+    remove(position){
+        if(position > -1 && position < this.length){
+            let current = head,
+                previous,
+                index = 0;
+
+            if(position === 0){
+                this.head = current.next;
+            }else{
+                
+            }
+        }
+    }
 }
