@@ -189,7 +189,7 @@ class LinkedNode{
     }
 
     // 插入一个节点
-    insert(element){
+    append(element){
         let node = new Node(element),
             current;
         
@@ -215,8 +215,48 @@ class LinkedNode{
             if(position === 0){
                 this.head = current.next;
             }else{
-                
+                while(index++ < position){
+                    previous = current;
+                    current = previous.next;
+                }
+
+                previous.next = current.next;
             }
+
+            this.length--;
+            return current.element;
+        }else{
+            return null;
+        }
+    }
+
+    // 在某一位置插入某个元素
+    insert(position, element){
+
+        if(position > -1 && position < this.length){
+            let node = new Node(element),
+                current = head,
+                previous,
+                index = 0;
+
+            if(position === 0){
+
+                this.head = node;
+                node.next = current;
+            }else{
+                while(index++ < position){
+                    previous = current;
+                    current = current.next;
+                }
+
+                node.next = current;
+                previous.next = node;
+            }
+
+            this.length++;
+            return true;
+        }else {
+            return false;
         }
     }
 }
