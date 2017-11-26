@@ -260,3 +260,37 @@ class LinkedNode{
         }
     }
 }
+
+
+
+// 图
+class Graph{
+    constructor(
+        vertices,// 顶点
+        edge=0,// 边
+        adj=[]// 和verticle相邻的所有顶点
+    ){
+        this.vertices = vertices;
+        for (let i = 0; i< this.vertices; i++){
+            this.adj[i] = [];
+            this.adj[i].push("");
+        }
+    }
+
+    addEdge(v, w){
+        this.adj[v].push(w);
+        this.adj[w].push(v);
+        this.edge++;
+    }
+
+    showData(){
+        for(let i = 0; i < this.adj.length; i++){
+            console.log(i);
+            for(let j = 0; j < this.adj.length; j++){
+                if(this.adj[i[j] !== undefined]){
+                    console.log(this.adj[i][j]+'');
+                }
+            }
+        }
+    }
+}
