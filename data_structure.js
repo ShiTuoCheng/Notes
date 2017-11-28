@@ -268,12 +268,16 @@ class Graph{
     constructor(
         vertices,// 顶点
         edge=0,// 边
-        adj=[]// 和verticle相邻的所有顶点
+        adj=[],// 和verticle相邻的所有顶点
+        marked=[] // 用来存储以标记的顶点
     ){
         this.vertices = vertices;
         for (let i = 0; i< this.vertices; i++){
             this.adj[i] = [];
             this.adj[i].push("");
+        }
+        for (let i = 0; i < this.vertices; i++){
+            this.marked[i] = false;
         }
     }
 
@@ -290,6 +294,19 @@ class Graph{
                 if(this.adj[i[j] !== undefined]){
                     console.log(this.adj[i][j]+'');
                 }
+            }
+        }
+    }
+
+    // 深度优先搜索
+    deepFirstSearch(v){
+        this.marked[v] = true;
+        if (this.adj[v] !== undefined){
+            console.log('访问的节点：'+v);
+        }
+        for(let i = 0; i < this.adj.length; i++){
+            if(!this.marked[this.adj[i]]){
+                this.deepFirstSearch(this.adj[i]);
             }
         }
     }
