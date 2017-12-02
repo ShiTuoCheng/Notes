@@ -311,3 +311,24 @@ class Graph{
         }
     }
 }
+
+// 散列
+class HashTable {
+    constructor(table) {
+        this.table = new Array(137);
+    }
+
+    simpleHash(data) {
+        let total = 0;
+        for (let i = 0; i < data.length; i++){
+
+            total += data.charCodeAt(i);
+        }
+        return total & this.table.length;
+    }
+
+    put(data) {
+        let pos = simpleHash(data);
+        this.table[pos] = data;
+    }
+}
