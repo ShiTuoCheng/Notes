@@ -329,6 +329,14 @@ class HashTable {
 
     put(data) {
         let pos = simpleHash(data);
-        this.table[pos] = data;
+        if(this.table[pos] == undefined){  
+            this.table[pos] = data;  
+        }else{  
+            // 若发生碰撞，则将数据存到下一个位置
+            while(this.table[pos] != undefined){  
+                pos++;  
+            }  
+            this.table[pos] = data;  
+        } 
     }
 }
