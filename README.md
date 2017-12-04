@@ -7,3 +7,4 @@
  ##### 5.[javascript实现深拷贝 浅拷贝](https://github.com/ShiTuoCheng/Notes/blob/master/copyObject.js)
  ##### 6.[javascript实现的一些数据结构](https://github.com/ShiTuoCheng/Notes/blob/master/data_structure.js)
  ##### 7.[完全二叉树和满二叉树的区别](https://github.com/ShiTuoCheng/Notes/blob/master/binaryTree.md)
+ ##### 8.[堆排序](https://github.com/ShiTuoCheng/Notes/blob/master/heapSort.js)
