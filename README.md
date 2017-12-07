@@ -8,3 +8,4 @@
  ##### 6.[javascript实现的一些数据结构](https://github.com/ShiTuoCheng/Notes/blob/master/data_structure.js)
  ##### 7.[完全二叉树和满二叉树的区别](https://github.com/ShiTuoCheng/Notes/blob/master/binaryTree.md)
  ##### 8.[堆排序](https://github.com/ShiTuoCheng/Notes/blob/master/heapSort.js)
+ ##### 8.[原生实现双向绑定](https://github.com/ShiTuoCheng/Notes/blob/master/bind.html)
