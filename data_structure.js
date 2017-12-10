@@ -329,14 +329,43 @@ class HashTable {
 
     put(data) {
         let pos = simpleHash(data);
-        if(this.table[pos] == undefined){  
-            this.table[pos] = data;  
-        }else{  
-            // 若发生碰撞，则将数据存到下一个位置
-            while(this.table[pos] != undefined){  
-                pos++;  
-            }  
-            this.table[pos] = data;  
-        } 
+        this.table[pos] = data;
+    }
+}
+
+// 集合
+class Set{
+    constructor(dataSource = []){
+    }
+
+    add(data) {
+        if (!~this.dataSource.indexOf(data)){
+            this.dataSource.push(data);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    remove(data){
+        let position = this.dataSource.indexOf(data);
+        if(~position){
+            this.dataSource.splice(position, 1);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    show(){
+        return this.dataSource;
+    }
+
+    contain(data) {
+        if(~this.dataSource.indexOf(data)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
