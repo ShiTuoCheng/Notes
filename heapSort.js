@@ -37,3 +37,14 @@ const buildMaxHeap = (array, heapSize) => {
         isMaxHeap(array, i, heapSize);
     }
 };
+
+// 开始堆排序
+const heapSort = (array, heapSize) => {
+
+    buildMaxHeap(array, heapSize);
+
+    for(let i = heapSize - 1; i > 0; i-- ){
+        swap(array, 0, i);
+        isMaxHeap(array, 0, i);
+    }
+};
