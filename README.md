@@ -11,3 +11,4 @@
  ##### 8.[原生实现双向绑定](https://github.com/ShiTuoCheng/Notes/blob/master/bind.html)
  ##### 9.[一道考察作用域和闭包的题目个人理解](https://github.com/ShiTuoCheng/Notes/blob/master/scope.md)
  ##### 10.[两种方法实现截流函数](https://github.com/ShiTuoCheng/Notes/blob/master/throttle.js)
+ ##### 11.[== 和 === 到底有什么区别](https://github.com/ShiTuoCheng/Notes/blob/master/equal.md)
