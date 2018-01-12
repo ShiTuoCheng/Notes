@@ -55,10 +55,11 @@ const bubbleSort = (arr) => {
     return arr;
 };
 
-//选择排序
+
+// //选择排序
 const selectSort = (arr) => {
 
-    let minIndex, temp;
+    let minIndex;
     if(Array.isArray(arr)){
 
         for(let i = 0; i < arr.length - 1; i++){
@@ -81,27 +82,27 @@ const selectSort = (arr) => {
 };
 
 // 插入排序
+
 const insertSort = (arr) => {
-
-    if(!Array.isArray(arr)){
-        return;
-    }
     let preIndex, current;
-    for(let i = 1; i < arr.length; i++){
+    if (Array.isArray(arr)) {
+        
+        for(let i = 1 ; i < arr.length; i++) {
 
-        preIndex = i -1;
-        current = arr[i];
+            preIndex = i -1;
+            current = arr[i];
 
-        while(preIndex >= 0 && arr[preIndex] > current){
+            while(preIndex >= 0 && arr[preIndex] > current) {
 
-            arr[preIndex+1] = arr[preIndex]; 
-            preIndex--;
+                arr[preIndex+1] = arr[preIndex];
+                preIndex--; 
+            }
+
+            arr[preIndex + 1] = current;
         }
 
-        arr[preIndex+1] = current;
+        return arr;
     }
-
-    return arr;
 };
 
 //归并排序
@@ -125,7 +126,7 @@ const mergeSort = (arr) => {
     return merge(mergeSort(left), mergeSort(right));
 };
 
-function merge(left, right){
+const merge = (left, right) => {
 
     let result = [];
 
@@ -152,7 +153,8 @@ function merge(left, right){
 
     return result;
 
-}
+};
+
 
 //快速排序
 const quickSort = (arr) => {
@@ -171,12 +173,39 @@ const quickSort = (arr) => {
     let pivot = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
-                if (arr[i] < pivot) {
-                    left.push( arr[i] );
-                } else {
-                    right.push( arr[i] );
-                }
-            }
+        if (arr[i] < pivot) {
+            left.push( arr[i] );
+        } else {
+            right.push( arr[i] );
+        }
+    }
 
     return quickSort( left ).concat( pivot, quickSort( right ));
+};
+
+
+// 计数排序
+const countSort = (arr, maxValue) => {
+    let bucket = new Array(maxValue+1),
+        sortedIndex = 0,
+        arrLen = arr.length,
+        bucketArrLen = maxValue + 1;
+    
+    for (let i = 0; i < arrLen; i++){
+        if(!bucket[arr[i]]){
+            bucket[arr[i]] = 0;
+        }
+
+        bucket[arr[i]]++;
+    }
+
+    for (let j = 0; j < bucketArrLen; j++) {
+        while(bucket[j] > 0){
+
+            arr[sortedIndex++] = j;
+            bucket[j]--;
+        }
+    }
+
+    return arr;
 };
