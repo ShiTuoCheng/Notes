@@ -217,7 +217,7 @@ const binarySearch = (arr, item) => {
     let start = 0;
     let m = Math.floor((start + end) / 2);
 
-    if (item == data[m]) {
+    if (item === data[m]) {
         return m;
     } else if (item < data[m]) {
         return binarySearch(data, item); //递归调用
