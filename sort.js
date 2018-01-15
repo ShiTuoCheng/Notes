@@ -209,3 +209,20 @@ const countSort = (arr, maxValue) => {
 
     return arr;
 };
+
+// 二分查找
+const binarySearch = (arr, item) => {
+
+    let end = data.length - 1;
+    let start = 0;
+    let m = Math.floor((start + end) / 2);
+
+    if (item == data[m]) {
+        return m;
+    } else if (item < data[m]) {
+        return binarySearch(data, item); //递归调用
+    } else {
+        return binarySearch(data, item);
+    }
+    return false;
+};
