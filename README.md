@@ -13,3 +13,4 @@
  ##### 10.[两种方法实现截流函数](https://github.com/ShiTuoCheng/Notes/blob/master/throttle.js)
  ##### 11.[== 和 === 到底有什么区别](https://github.com/ShiTuoCheng/Notes/blob/master/equal.md)
  ##### 12.[http缓存笔记](https://github.com/ShiTuoCheng/Notes/blob/master/http.md)
+ ##### 13.[通过分析作用域链和执行上下文来谈一谈js的闭包](https://github.com/ShiTuoCheng/Notes/blob/master/talkAboutClosure.js)
