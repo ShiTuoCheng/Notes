@@ -15,3 +15,4 @@
  ##### 12.[http缓存笔记](https://github.com/ShiTuoCheng/Notes/blob/master/http.md)
  ##### 13.[通过分析作用域链和执行上下文来谈一谈js的闭包](https://github.com/ShiTuoCheng/Notes/blob/master/talkAboutClosure.js)
  ##### 14.[分析几种不同的继承方式的优缺点](https://github.com/ShiTuoCheng/Notes/blob/master/inherit.js)
+ ##### 15.[web存储的笔记](https://github.com/ShiTuoCheng/Notes/blob/master/webStorage.md)
