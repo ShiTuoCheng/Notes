@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>textBind</title>
+  <title>textBind</title>
 </head>
 
 <body>
-    <input type="text" name="infoInsert">
-    <input type="button" name="newText" value="Reset">
-    <p id="infoShow"></p>
-    <script type="text/javascript">
-        let obj = {
-            fuck: 'shit'
-        };
-        Object.defineProperty(obj, 'bindData', {
-            get() {
-                return this.fuck;
-            },
-            set(newValue) {
-                document.getElementById('infoShow').innerText = newValue;
-                document.getElementsByName('infoInsert')[0].value = newValue;
-            }
-        });
-        document.getElementsByName('infoInsert')[0].addEventListener('keyup', function () {
-            obj.bindData = this.value;
-        });
-        document.getElementsByName('newText')[0].addEventListener('click', function () {
-            obj.bindData  = 'asshole';
-        });
-    </script>
+  <input type="text" name="infoInsert">
+  <input type="button" name="newText" value="Reset">
+  <p id="infoShow"></p>
+  <script type="text/javascript">
+    let obj = {
+      fuck: 'shit'
+    };
+    Object.defineProperty(obj, 'fuck', {
+      get() {
+        return this.fuck;
+      },
+      set(newValue) {
+        document.getElementById('infoShow').innerText = newValue;
+        document.getElementsByName('infoInsert')[0].value = newValue;
+      }
+    });
+    document.getElementsByName('infoInsert')[0].addEventListener('keyup', function () {
+      obj.fuck = this.value;
+    });
+    document.getElementsByName('newText')[0].addEventListener('click', function () {
+      obj.fuck = 'asshole';
+    });
+  </script>
 </body>
+
 </html>
