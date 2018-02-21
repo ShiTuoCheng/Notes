@@ -291,7 +291,7 @@ class Graph{
         for(let i = 0; i < this.adj.length; i++){
             console.log(i);
             for(let j = 0; j < this.adj.length; j++){
-                if(this.adj[i[j] !== undefined]){
+                if(this.adj[i[j]] !== undefined){
                     console.log(this.adj[i][j]+'');
                 }
             }
