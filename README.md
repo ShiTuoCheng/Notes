@@ -17,3 +17,4 @@
  ##### 14.[分析几种不同的继承方式的优缺点](https://github.com/ShiTuoCheng/Notes/blob/master/inherit.js)
  ##### 15.[web存储的笔记](https://github.com/ShiTuoCheng/Notes/blob/master/webStorage.md)
  ##### 16.[模拟js的new函数的实现](https://github.com/ShiTuoCheng/Notes/blob/master/new_js.js)
+ ##### 17.[一道考察js按值传递参数总结加笔记](https://github.com/ShiTuoCheng/Notes/blob/master/param.md)
