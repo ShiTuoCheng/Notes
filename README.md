@@ -19,3 +19,4 @@
  ##### 16.[模拟js的new函数的实现](https://github.com/ShiTuoCheng/Notes/blob/master/new_js.js)
  ##### 17.[一道考察js按值传递参数总结加笔记](https://github.com/ShiTuoCheng/Notes/blob/master/param.md)
  ##### 18.[个人解析perfectionkills——javascript-quiz](https://github.com/ShiTuoCheng/Notes/blob/master/perfectionkills_js_quiz.md)
+ ##### 19.[总结css以及js加在对页面的影响](https://github.com/ShiTuoCheng/Notes/blob/master/opz_css_js.md)
