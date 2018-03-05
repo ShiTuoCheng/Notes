@@ -56,3 +56,54 @@ var foo = {
   return typeof arguments[0]();
 })(foo.bar); 
 ```
+
+##### 翻译一下以上语句
+```js
+typeof arguments[0]();
+```
+##### 相当于
+```js
+(function() { return this.baz; })();
+```
+##### 所以这时的this指的是window或者global。所以在全局找不到baz属性
+### this绑定规则：
+> 1.函数是否是new调用（new绑定）？若是，则this指向新对象
+> 
+> 2.函数是否是bind方法返回的（硬绑定）？若是，则this指向指定对象。
+> 
+> 3.函数是否通过apply/call调用（硬绑定）？若是，则this指向指定对象。
+>
+> 4.是否作为对象的方法调用（隐式绑定）？若是，则this指向该对象
+>
+> 5.this指向全局
+
+```js
+
+  var foo = {
+    bar: function(){ return this.baz; },
+    baz: 1
+  }
+  typeof (f = foo.bar)();
+```
+##### 解析同上，这里不说了。
+
+```js
+var f = (function f(){ return "1"; }, function g(){ return 2; })();
+typeof f;
+```
+##### js符号优先级，所以总是返回最后一项 number；
+
+```js
+var x = 1;
+if (function f(){}) {
+	x += typeof f;
+}
+x;
+```
+##### function f(){}加了括号就变成了函数表达式。函数表达式的名字只能函数内部可见。所以这里x 为1undefined。
+
+```js
+var x = [typeof x, typeof y][1];
+typeof typeof x;
+```
+##### var x = typeof y。 
