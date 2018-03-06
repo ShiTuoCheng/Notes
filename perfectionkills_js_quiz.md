@@ -106,4 +106,10 @@ x;
 var x = [typeof x, typeof y][1];
 typeof typeof x;
 ```
-##### var x = typeof y。 
+##### var x = typeof y; x = 'undefined'; typeof typeof 'undefined';
+##### 所以这里输出string。
+```js
+(function(foo){
+	return typeof foo.bar;
+})({ foo: { bar: 1 } });
+```
