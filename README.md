@@ -20,3 +20,4 @@
  ##### 17.[一道考察js按值传递参数总结加笔记](https://github.com/ShiTuoCheng/Notes/blob/master/param.md)
  ##### 18.[个人解析perfectionkills——javascript-quiz](https://github.com/ShiTuoCheng/Notes/blob/master/perfectionkills_js_quiz.md)
  ##### 19.[总结css以及js加在对页面的影响](https://github.com/ShiTuoCheng/Notes/blob/master/opz_css_js.md)
+ ##### 20.[javascript实现柯里化](https://github.com/ShiTuoCheng/Notes/blob/master/curry.md)
