@@ -21,3 +21,4 @@
  ##### 18.[个人解析perfectionkills——javascript-quiz](https://github.com/ShiTuoCheng/Notes/blob/master/perfectionkills_js_quiz.md)
  ##### 19.[总结css以及js加在对页面的影响](https://github.com/ShiTuoCheng/Notes/blob/master/opz_css_js.md)
  ##### 20.[javascript实现柯里化](https://github.com/ShiTuoCheng/Notes/blob/master/curry.md)
+ ##### 21.[JavaScript中symbol对象中方法的知识梳理](https://github.com/ShiTuoCheng/Notes/blob/master/JavaScript%E4%B8%ADsymbol%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%96%B9%E6%B3%95%E7%9A%84%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86.md)
