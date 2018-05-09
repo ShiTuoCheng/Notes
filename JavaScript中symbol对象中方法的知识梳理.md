@@ -1,5 +1,9 @@
 ## JavaScript中symbol对象中方法的知识梳理
 
+> 参考来源《深入理解ES6》+ 别人的文章 + 自己的一点总结
+
+##### 未完待续
+
 ### 1.Symbol.hasInstance
 
 > 每一个函数都有一个Symbol.hasInstance, 用于确定某个对象是否为该函数的事例。该方法在Function.prototype中定义，所以所有的函数都有该方法。而且为了确保该方法不会被意外重写，该方法writable：false， enumerable： false， configurable： false。
