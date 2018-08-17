@@ -10,13 +10,13 @@
 
 
 ##### 换句话说：
->三者的异同：上面的使用方式说好了，下面就唠唠三者之间的区别，这个问题其实很多大厂面试的时候也都会问到，所以可以注意一下这几个之间的区别。<br>
->
-生命周期：cookie：可设置失效时间，没有设置的话，默认是关闭浏览器后失效。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localStorage：除非被手动清除，否则将会永久保存。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sessionStorage： 仅在当前网页会话下有效，关闭页面或浏览器后就会被清除。<br>
-存放数据大小：cookie：4KB左右。<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localStorage和sessionStorage：可以保存5MB的信息。<br>
-http请求：<br>cookie：每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题。
-localStorage和sessionStorage：仅在客户端（即浏览器）中保存，不参与和服务器的通信。<br>
-易用性：cookie：需要程序员自己封装，源生的Cookie接口不友好。<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localStorage和sessionStorage：源生接口可以接受，亦可再次封装来对Object和Array有更好的支持。
+> 三者的异同：上面的使用方式说好了，下面就唠唠三者之间的区别，这个问题其实很多大厂面试的时候也都会问到，所以可以注意一下这几个之间的区别。
+> 生命周期：cookie：可设置失效时间，没有设置的话，默认是关闭浏览器后失效。
+> localStorage：除非被手动清除，否则将会永久保存。
+> sessionStorage： 仅在当前网页会话下有效，关闭页面或浏览器后就会被清除。
+存放数据大小：cookie：4KB左右。
+> localStorage和sessionStorage：可以保存5MB的信息。
+http请求：cookie：每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题。
+localStorage和sessionStorage：仅在客户端（即浏览器）中保存，不参与和服务器的通信。
+易用性：cookie：需要程序员自己封装，源生的Cookie接口不友好。
+> localStorage和sessionStorage：源生接口可以接受，亦可再次封装来对Object和Array有更好的支持。
